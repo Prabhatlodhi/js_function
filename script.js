@@ -59,6 +59,77 @@
 
 
 // IIFE
-(function () {
-    console.log("Hello");
-})();
+// (function () {
+//     console.log("Hello");
+// })();
+
+
+// function doHomework (subject, callback){
+//     // console.log(callback);
+//     console.log("Starting my " + subject + " homework.");
+//     callback()
+// }
+
+// function finishHomework(){
+//     console.log("Finished my homework");
+// }
+
+// doHomework("English", finishHomework)
+
+
+
+// function calculator(number1, number2, cb){ 
+//     return cb(number1, number2)
+// }
+
+// function addNum(a,b){
+//     return a+b;
+// }
+
+// function substract(a,b){
+//     return a-b;
+// }
+
+// function multiplication(a,b){
+//     return a*b;
+// }
+
+// let result = calculator(5, 9, addNum);
+// console.log( "Sum ", result);
+
+// let result = calculator(15, 9, substract);
+// console.log( "Substract ", result);
+
+// let result = calculator(15, 9, multiplication);
+// console.log( "Multiplication ====> ", result);
+
+
+// function performOperation (number, operation){
+//     return operation(number);
+// }
+
+// function double(number){
+//     return number*2;
+// }
+
+// let result = performOperation(11, double);
+// console.log( "I have double the given number", result);
+
+
+function makeTea(ingredient, prepareIngredient){
+    const preparedIngredient = prepareIngredient(ingredient)
+    return `Tea with ${preparedIngredient} `
+}
+
+function addTeaLeaves(teaLeaves){
+    return ` ${teaLeaves} spoon of tea leaves.`
+};
+
+function addSugar(sugar){
+    return ` ${sugar} spoon of sugar.`
+};
+
+let leafyTea = makeTea(1, addTeaLeaves);
+console.log(leafyTea);
+let sugarTea = makeTea(2, addSugar);
+console.log(sugarTea);
