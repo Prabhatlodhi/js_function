@@ -78,30 +78,32 @@
 
 
 
-// function calculator(number1, number2, cb){ 
-//     return cb(number1, number2)
-// }
+function calculator(number1, number2, cb1, cb2){ 
+    let subs = cb2(number1, number2);
+    console.log( "Substract", subs);
+    return cb1(number1, number2)
+}
 
-// function addNum(a,b){
-//     return a+b;
-// }
+function addNum(a,b){
+    return a+b;
+}
 
-// function substract(a,b){
-//     return a-b;
-// }
+function substract(a,b){
+    return a-b;
+}
 
 // function multiplication(a,b){
 //     return a*b;
 // }
 
-// let result = calculator(5, 9, addNum);
-// console.log( "Sum ", result);
+let result1 = calculator(15, 9, addNum, substract);
+console.log( "Sum ", result1);
 
-// let result = calculator(15, 9, substract);
-// console.log( "Substract ", result);
+// let result2 = calculator(15, 9, substract);
+// console.log( "Substract ", result2);
 
-// let result = calculator(15, 9, multiplication);
-// console.log( "Multiplication ====> ", result);
+// let result3 = calculator(15, 9, multiplication);
+// console.log( "Multiplication ====> ", result3);
 
 
 // function performOperation (number, operation){
@@ -116,20 +118,34 @@
 // console.log( "I have double the given number", result);
 
 
-function makeTea(ingredient, prepareIngredient){
-    const preparedIngredient = prepareIngredient(ingredient)
-    return `Tea with ${preparedIngredient} `
-}
+// function makeTea(ingredient, prepareIngredient){
+//     const preparedIngredient = prepareIngredient(ingredient)
+//     return `Tea with ${preparedIngredient} `
+// }
 
-function addTeaLeaves(teaLeaves){
-    return ` ${teaLeaves} spoon of tea leaves.`
-};
+// function addTeaLeaves(teaLeaves){
+//     return ` ${teaLeaves} spoon of tea leaves.`
+// };
 
-function addSugar(sugar){
-    return ` ${sugar} spoon of sugar.`
-};
+// function addSugar(sugar){
+//     return ` ${sugar} spoon of sugar.`
+// };
 
-let leafyTea = makeTea(1, addTeaLeaves);
-console.log(leafyTea);
-let sugarTea = makeTea(2, addSugar);
-console.log(sugarTea);
+// let leafyTea = makeTea(1, addTeaLeaves);
+// console.log(leafyTea);
+// let sugarTea = makeTea(2, addSugar);
+// console.log(sugarTea);
+
+
+// function addNumber (number1, number2, harshit){
+//     console.log(harshit);
+//     const sum = number1 + number2;
+//     harshit(sum);
+// };
+
+
+// function displayResult(result){
+//     console.log(`The result is : ${result}. `);
+// }
+
+// addNumber(5,7, displayResult)
